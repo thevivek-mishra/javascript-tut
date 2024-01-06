@@ -76,3 +76,22 @@
     console.log(stringNumber) // "33" 
 
 }
+// ****************Operations **************************
+let value =3
+let negValue = -value
+console.log(negValue) // -3
+
+let str1 ="hellow"
+let str2 =" Vivek"
+let str3 = str1 + str2;
+console.log(str3)
+
+console.log("1" + 2) // 12
+console.log(1 + "2") // 12
+console.log("1" + 2 +2) // 122
+console.log(2 +2 + "1") // 41
+
+console.log(true) // true
+console.log(+true) // 1
+//console.log(true-) // SyntaxError :unexpected token 
+console.log(+"") // 0
