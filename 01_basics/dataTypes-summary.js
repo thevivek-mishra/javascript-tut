@@ -35,6 +35,29 @@ const myFunction =function(){
 
 console.log(typeof myFunction) // function
 
+// stack (primitive), Heap(Non Primitive)
+let myYoutubename ="moviemasti"
+let anothename =myYoutubename;
+anothename = "justchill"
+
+console.log(anothename)
+console.log(myYoutubename)
+
+let userOne ={
+    email: "user@gmail.com",
+    upi:"user@ybl"
+
+}
+
+let userTwo =userOne;
+
+userTwo.email ="vivek@gmail.com"
+
+console.log(userTwo.email) //vivek@gmail.com
+console.log(userOne.email) //vivek@gmail.com
+
+// wheneve we change the non primitive data types value we change the actual value in heap memory
+// whenever we change the value of primitive data types we change the copy of that in stack memory
 
 
 
