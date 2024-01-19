@@ -30,7 +30,7 @@ jsUser.greeting =function (){
 }
 
 
-jsUser.greetingTwo(){
+jsUser.greetingTwo =function(){
     console.log(`hellow js user, ${this.name}`)
 }
 
