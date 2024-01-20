@@ -24,7 +24,7 @@ function addTwoNumbers2(num1,num2){ // function definiton >parameter
 
  console.log(result2) //7
 
- const userLoggedIn (username="other name"){
+ function userLoggedIn(username){
     if(!username){
         console.log("please enter user name")
         return
@@ -35,8 +35,37 @@ function addTwoNumbers2(num1,num2){ // function definiton >parameter
 
  console.log(userLoggedIn("vivek"))
 
+ function calculatePrice(...num){
+    return num
+ }
 
+ console.log(calculatePrice(200,300,300))
 
+ const user ={
+    username:"vivek mishra",
+    price:200
+ }
+
+ function handleObject(anyObj){
+    console.log(`username is ${anyObj.username} and price is ${anyObj.price}`)
+ }
+
+//  handleObject(user)
+
+handleObject({
+    username:"vivek mishra",
+    price:200
+ })
+
+ const newArr =[244,34,5,5,6]
+
+ function handleArr (anyArr){
+    return anyArr[1]
+ }
+
+// handleArr(newArr)
+
+handleArr([244,34,5,5,6])
 
 
 
