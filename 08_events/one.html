@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141;;">
+    <h2>amazing image</h2>
+    <ul id="images">
+        <li><img width="200px" id="mountain" src="images/1.jpg" alt=""></li>
+        <li><img width="200px" id="river" src="images/2.jpg" alt=""></li>
+        <li><img width="200px" id="forest" src="images/3.jpg" alt=""></li>
+        <li><img width="200px" id="car" src="images/4.jpg" alt=""></li>
+        <li><img width="200px" id="catfish" src="images/5.jpg" alt=""></li>
+        <li><img width="200px" id="icemountain" src="images/6.jpg" alt=""></li>
+        <li><a style="color: aliceblue;" id="google" href="https://google.com">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('mountain').onclick =function(){
+        // alert("mountian image click")
+    // }
+
+    //attchEvent --early time we used 
+    // jquery --onEventListner ---
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("click inside ul")
+    // },false) //false bubbling mode inner to outer propogation , true --capturing mode -- outer to inner propogatin by default false
+
+    // document.getElementById('mountain').addEventListener('click',function(e){
+    //     console.log("click inside ul")
+    //     e.stopPropagation()
+    //     e.preventDefault()
+    // },false)
+    //type, timestamp, defaultPrevent
+    //target, toElement, srcElement, currentTarget
+    //altkey,ctrkey,shiftkey,keycode
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     e.stopPropagation()
+    //     console.log("google click")
+    // })
+    document.querySelector('#images').addEventListener('click',function(e){
+        let removeIt =e.target.parentNode
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.id)
+                    // removeIt.remove() 
+                    removeIt.parentNode.removeChild(removeIt)
+
+        }
+
+    })
+</script>
+</html>
