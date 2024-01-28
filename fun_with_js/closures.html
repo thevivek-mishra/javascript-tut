@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function init(){
+    //     let name= 'vivek'
+    //     function displayName(){
+    //         console.log(name)
+    //     }
+    //     displayName()
+    // }
+    // init()
+
+    // function outerFn(){
+    //     let username ="vivek"
+    //     function innerOne(){
+    //         let scret ="wer233"
+    //         console.log(username)
+    //     }
+    //     function innerTwo(){
+    //         console.log(username)
+    //         console.log(scret)
+    //     }
+    //     innerOne()
+    //     innerTwo()
+    // }
+    // outerFn()
+
+    function makeFunc(){
+        const name ="vivek"
+        function displayName(){
+            console.log(name)
+        }
+        return displayName()
+    }
+    const myFunc = makeFunc(); // return not only function definiton but also lexical scope of outter function 
+    myFunc()
+</script>
+
+<!-- pratical of closure and lexical scope -->
+<script>
+    // document.getElementById('orange').onclick= function(){
+    //     document.body.style.backgroundColor =`orange`
+    // }
+    // document.getElementById('green').onclick= function(){
+    //     document.body.style.backgroundColor =`green`
+    // }
+
+
+        document.getElementById('orange').onclick= clickHanlder("orange")
+        document.getElementById('green').onclick= clickHanlder("green")
+
+
+
+
+
+    function clickHanlder(color){
+        // document.body.style.backgroundColor =`${color}`
+
+       return function(){
+            document.body.style.backgroundColor =`${color}`
+
+        }
+    }
+</script>
+</html>
